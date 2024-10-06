@@ -5,6 +5,7 @@
     "sitefox": "^0.0.25"
   },
   "scripts": {
-    "updater": "nbb --classpath ./node_modules/sitefox/src/ updater.cljs"
+    "updater": "nbb --classpath ./node_modules/sitefox/src/ updater.cljs",
+    "watch": "while [ 1 ]; do npm run updater; sleep 1; done"
   }
 }
