@@ -39,7 +39,7 @@
       }
 
       ul.hourlyForecast time {
-        font-size: 0.5em;
+        font-size: 0.65em;
       }
 
       ul.hourlyForecast h3 {
@@ -51,13 +51,16 @@
       }
 
       ul.hourlyForecast li .temperature {
-        background-color: black;
-        color: white;
+        border: 2px solid black;
         padding: 0.25em 0.5em;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
       }
-      
+
+      ul.hourlyForecast .temperature img {
+        filter: invert(1);
+      }
+
       ul.hourlyForecast li .temperature dl dd:nth-child(2) {
         display: none;
       }
@@ -81,6 +84,13 @@
       }
 
       table.dailyForecast {
+        display: none;
+      }
+      
+      table.dailyForecast tr:nth-child(n+3) {
+      }
+
+      table.dailyForecast td:nth-child(5) {
         display: none;
       }
     </style>
