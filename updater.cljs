@@ -18,11 +18,11 @@
         days (Math/ceil (/ diff (* 1000 60 60 24)))]
     days))
 
-(defn process-hourly-forecast [hourly-forecast]
-  (doseq [img (js/Array.from (.querySelectorAll hourly-forecast "img"))]
+(defn process-images [forecast]
+  (doseq [img (js/Array.from (.querySelectorAll forecast "img"))]
     (let [src (.getAttribute img "data-wf-src")]
       (.setAttribute img "src" src)))
-  hourly-forecast)
+  forecast)
 
 (defn component:page [days daily-forecast hourly-forecast]
   [:<>
@@ -35,8 +35,9 @@
      {:__html (.toString daily-forecast)}}]])
 
 (let [weather-dom (parse weather)
-      daily-forecast (.querySelector weather-dom ".dailyForecast")
-      hourly-forecast (process-hourly-forecast
+      daily-forecast (process-images
+                       (.querySelector weather-dom ".dailyForecast"))
+      hourly-forecast (process-images
                         (.querySelector weather-dom ".hourlyForecast"))
       page (select-apply
              template

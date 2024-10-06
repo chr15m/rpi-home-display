@@ -84,10 +84,45 @@
       }
 
       table.dailyForecast {
+        width: 100%;
+      }
+
+      table.dailyForecast tr td {
+        padding-top: 1em;
+      }
+
+      table.dailyForecast tr td:first-child {
+        width: 1%;
+        text-align: left;
+      }
+
+      table.dailyForecast button {
         display: none;
       }
       
-      table.dailyForecast tr:nth-child(n+3) {
+      table.dailyForecast tr:nth-child(n+8) {
+        display: none;
+      }
+
+      table.dailyForecast img {
+        filter: invert(1);
+      }
+
+      table.dailyForecast tr {
+        margin: 0px 0.5em;
+      }
+
+      table.dailyForecast dl {
+        margin: 0px;
+      }
+
+      table.dailyForecast dl dd {
+        margin: 0px;
+      }
+
+      table.dailyForecast td:nth-child(4) dl dd:nth-child(2),
+      table.dailyForecast td:nth-child(4) dl dd:nth-child(6) {
+        display: none;
       }
 
       table.dailyForecast td:nth-child(5) {
