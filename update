@@ -1,0 +1,23 @@
+#!/bin/sh
+
+{
+  echo "--- START Running screen update ---"
+  date
+
+  # Download the London weather
+  curl -s https://uk.news.yahoo.com/weather/united-kingdom/england/london-44418 > london-weather.html
+
+  # Just print text on the screen
+  # days=$(python3 days.py)
+  # python single.py "${days} days left"
+
+  npm run updater
+
+  # Convert index.html to PNG so we can display it
+  wkhtmltoimage --height 800 --width 480 index.html image.png
+
+  # Display an image
+  python display_image.py
+
+  echo "--- DONE Screen update complete ---"
+} > cron.log 2>&1

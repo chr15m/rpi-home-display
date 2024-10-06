@@ -1,0 +1,7 @@
+.*.swp
+node_modules
+image.bmp
+image.png
+index.html
+*lock*
+workspace

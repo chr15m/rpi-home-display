@@ -1,0 +1,6 @@
+{
+  "dependencies": {"nbb":"^1.2.192","sitefox":"^0.0.25"},
+  "scripts": {
+    "updater": "nbb --classpath ./node_modules/sitefox/src/ updater.cljs"
+  }
+}
