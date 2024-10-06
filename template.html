@@ -29,10 +29,21 @@
         margin: 0px;
         padding: 0px;
         list-style-type: none;
-        gap: 0.5em;
         align-items: center;
         justify-content: center;
         text-align: center;
+      }
+
+      ul.hourlyForecast li + li {
+        margin-left: 0.5em;
+      }
+
+      ul.hourlyForecast time {
+        font-size: 0.5em;
+      }
+
+      ul.hourlyForecast h3 {
+        margin: 0px;
       }
 
       ul.hourlyForecast li:nth-child(n+8) {
