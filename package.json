@@ -1,5 +1,9 @@
 {
-  "dependencies": {"nbb":"^1.2.192","sitefox":"^0.0.25"},
+  "dependencies": {
+    "nbb": "^1.2.192",
+    "node-html-parser": "^6.1.13",
+    "sitefox": "^0.0.25"
+  },
   "scripts": {
     "updater": "nbb --classpath ./node_modules/sitefox/src/ updater.cljs"
   }

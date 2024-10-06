@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Raspberry Pi Display</title>
     <style>
       body {
@@ -12,6 +13,64 @@
         align-items: center;
         height: 100vh;
         margin: 0;
+        font-size: 1.5em;
+      }
+
+      #app {
+        text-align: center;
+      }
+
+      .Hidden {
+        display: none;
+      }
+
+      ul.hourlyForecast {
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+        gap: 0.5em;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      ul.hourlyForecast li:nth-child(n+8) {
+        display: none;
+      }
+
+      ul.hourlyForecast li .temperature {
+        background-color: black;
+        color: white;
+        padding: 0.25em 0.5em;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      
+      ul.hourlyForecast li .temperature dl dd:nth-child(2) {
+        display: none;
+      }
+
+      ul.hourlyForecast li .temperature dl dd {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+      }
+
+      ul.hourlyForecast li .precipitation {
+        background-color: black;
+        color: white;
+        padding: 0.25em 0.5em;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      
+      ul.hourlyForecast li .wind {
+        display: none;
+      }
+
+      table.dailyForecast {
+        display: none;
       }
     </style>
   </head>
