@@ -25,6 +25,13 @@ You may need to make the script executable first:
 chmod +x setup.sh
 ```
 
+### Enable SPI
+
+- Run `sudo raspi-config`
+- Select Interfacing Options
+- Arrow down to SPI
+- Select yes when it asks you to enable SPI
+
 ## Usage
 
 ### Manual Update
