@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wkhtmltoimage --height 800 --width 480 "$@" image.png
+python display_image.py
